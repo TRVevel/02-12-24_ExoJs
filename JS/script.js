@@ -1,5 +1,7 @@
-import { Compte } from "./banque/compteBancaire.js";
+import { CompteBancaire } from "./banque/compteBancaire.js";
 
-let compte = new Compte;
-compte.deposer100();
-compte.afficherSolde();
+let monCompte = new CompteBancaire;
+monCompte.deposer(100);
+monCompte.afficherSolde();
+monCompte.retirer(30);
+monCompte.afficherSolde();

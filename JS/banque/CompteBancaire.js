@@ -1,13 +1,13 @@
-export class Compte {
+export class CompteBancaire {
     #solde = 0;
-    deposer100() {
-        this.#solde = this.#solde + 100;
+    deposer(montantDepot) {
+        this.#solde = this.#solde + montantDepot;
         console.log("Opération + reussie")
     }
-    retirer10() {
+    retirer(montantDebit) {
 
-        if (this.#solde > 10) {
-            this.#solde = this.#solde - 10;
+        if (this.#solde >= montantDebit) {
+            this.#solde = this.#solde - montantDebit;
             console.log("Opération - reussie")
         } else {
             console.log(`"Impossible de retirer de l'argent, votre solde est de :"${this.#solde}€`)
